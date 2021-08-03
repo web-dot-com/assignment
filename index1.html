@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="secondpage">
+ <h2 id="q"></h2>
+   <h2 id="a"></h2>
+   <h2 id="z"></h2>
+<h2 id="x"></h2>
+    
+    </div>
+<script>
+
+async function getdata() {
+            const obj1 = await fetch("https://api.dictionaryapi.dev/api/v2/entries/en_US/hello");
+            const obj2 = await obj1.json();
+            const obje3 = obj2[0].meanings[0].definitions[0].definition;
+            const obje4 = obj2[0].meanings[0].definitions[0].example;
+            const obje5 = obj2[0].meanings[0].definitions[0].synonyms;
+            const obje6= obj2[0].phonetics[0].text
+          document.getElementById("q").innerHTML= "TEXT ->" + obje6;
+          document.getElementById("a").innerHTML= "Definition ->" + obje3;
+          document.getElementById("z").innerHTML= "Example ->" +  obje4;
+          document.getElementById("x").innerHTML=  "Synonyms ->" +obje5;
+          
+
+
+}
+getdata()
+
+
+
+</script>
+</body>
+</html>

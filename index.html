@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSIGNMENT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <h1>ASSIGNMENT PROJECT</h1>
+<br> <br> <br>
+    <div class="firstdiv">
+        <h2 style="font-size: 1cm;">word : hello</h2>      
+        <h2 id="data"> </h2>
+        <h2 id="data1"></h2>
+        <h2 id="five" ></h2>
+        <a href="index1.html"> <button class="btn"  >DETAILS</button></a> 
+        <button  class="btn" onclick="audio()"  >Audio </button>   
+    </div>
+    <footer><p>Made By Mayank Singh</p></footer>
+    <script>
+        async function getdata() {
+            const obj1 = await fetch("https://api.dictionaryapi.dev/api/v2/entries/en_US/hello");
+            const obj2 = await obj1.json();
+            const obj3 = obj2[0];
+            const obj4 = obj2[0].phonetics[0].text;
+            const ob5 = obj2[0].phonetics[0].audio;
+            const obj6 = obj2[0].phonetics[1].text;
+            const ob7 = obj2[0].phonetics[1].audio;
+            const ob8 = obj2[0].meanings[0].definitions[0].definition;
+           const ob9 = obj2[0].meanings[0].partOfSpeech;
+            document.getElementById("data").innerHTML = "Text :"+ obj4;
+            document.getElementById("data1").innerHTML= "Part Of Speech :" + ob9;
+       
+            document.getElementById("five").innerHTML= "Meaning :" + ob8;
+        }
+        getdata();
+        function audio() {
+            window.open("https://lex-audio.useremarkable.com/mp3/hello_us_1_rr.mp3")
+        }
+    </script>
+  
+</body>
+
+</html>

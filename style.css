@@ -1,0 +1,66 @@
+.firstdiv{
+   padding: 0.5cm 0.5cm;
+    background-color:  rgba(142, 196, 178, 0.815);
+    text-align: center;
+    align-items: center;
+    margin-left: 10cm;
+    margin-right: 10cm;
+    border-radius: 2cm;
+    margin-top: 1cm;
+    border-color: olive;
+    border: olive;
+}
+.firstdiv:hover{
+    background-color:rgba(149, 173, 149, 0.925) ;
+    transition-duration: 0.4s;
+    color: snow;
+    
+    
+}
+h1{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-color: rgba(226, 189, 155, 0.87);
+    padding: 1cm;
+    margin: 0%;
+}
+h1:hover{
+    color: palegoldenrod;
+}
+
+body{
+    background-color: rgb(163, 141, 141);
+    margin: 0%;
+}
+body:hover{
+    background-color: rgb(87, 67, 67);
+    transition-duration: 1s;
+}
+.btn{
+    padding: 10px 10px; 
+    background-color: rgb(170, 233, 53);
+    color: black;
+    border-radius: 5px;
+}
+.btn:hover{
+    background-color: rgb(235, 156, 67);
+    cursor:pointer;
+    transition-duration: 0.5s;
+}
+.secondpage{
+    margin-top: 5cm;
+    margin-left: 4cm;
+    margin-right: 4cm;
+    background-color: #ada397;
+    padding: 1cm 1cm ;
+    border-radius: 10px;
+    text-align: center;
+}
+footer{
+    text-align: center;
+    margin-bottom: 0cm;
+    margin-top: 2.5cm;
+}
+footer:hover{
+    color: palegoldenrod;
+}
